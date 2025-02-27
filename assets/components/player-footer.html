@@ -1,0 +1,49 @@
+<footer class="container-fluid bg-black">
+    <div class="row px-2" style="height: 7.5vh;">
+        <div class="row py-2 d-flex align-items-center">
+            <div class="col-2">
+                <div class="d-flex flex-row gap-3">
+                    <img src="" id="current-song-image" class="rounded" style="width: 3.5rem; height: 3.5rem;">
+                    <div class="d-flex flex-column justify-content-center align-items-start">
+                        <small class="text-white" id="current-song-name"></small>
+                        <small class="text-secondary" id="current-song-artist"></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex flex-row">
+                        <button id="shuffle-btn" class="btn btn-dark rounded-pill py-1 px-3 fs-6 fw-light">
+                            <i class="bi bi-shuffle"></i>
+                        </button>
+                        <button id="prev-btn" class="btn btn-dark rounded-pill py-1 px-3 fs-6 fw-light">
+                            <i class="bi bi-skip-start-fill"></i>
+                        </button>
+                        <button id="play-btn" class="btn btn-dark rounded-pill py-1 px-3 fs-6 fw-light">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </button>
+                        <button id="next-btn" class="btn btn-dark rounded-pill py-1 px-3 fs-6 fw-light">
+                            <i class="bi bi-skip-end-fill"></i>
+                        </button>
+                        <button id="repeat-btn" class="btn btn-dark rounded-pill py-1 px-3 fs-6 fw-light">
+                            <i class="bi bi-repeat"></i>
+                        </button>
+                    </div>
+                    <div class="d-flex flex-row align-items-center gap-2">
+                        <small class="fw-light text-white" id="current-time">0:00</small>
+                        <input type="range" class="form-range" id="progress-slider" min="0" max="100" step="1" value="0" style="width: 40rem;">
+                        <small class="fw-light text-white" id="duration">0:00</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="d-flex flex-row text-white align-items-center gap-2 justify-content-end">
+                    <i id="volume-icon" class="bi bi-volume-up-fill" style="font-size: 1.5rem;"></i>
+                    <input type="range" class="form-range" id="volume-slider" min="0" max="100" step="1" value="100" style="width: 50%;">
+                </div>
+            </div>
+        </div>
+        <div class="h-full w-full d-flex flex-row justify-content-between ">
+        </div>
+    </div>
+</footer>

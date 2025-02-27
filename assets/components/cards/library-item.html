@@ -1,0 +1,10 @@
+<a href="/playlist.html" class="btn btn-dark p-1 d-flex flex-row justify-content-start gap-2 align-items-center rounded" style="cursor: pointer; width: 100%; --bs-btn-bg: transparent; --bs-btn-border-color: transparent;">
+    <img src="{{image}}" class="{{rounded}}" style="width: 3.5rem; height: 3.5rem;">
+    <div class="d-flex flex-column justify-content-center align-items-start text-white">
+        {{title}}
+        <p>
+            {{#pinned}}<i class="bi bi-pin-angle-fill text-success"></i>{{/pinned}}
+            <small class="text-secondary">{{type}}{{#subtype}} · {{subtype}}{{/subtype}}</small>
+        </p>
+    </div>
+</a>

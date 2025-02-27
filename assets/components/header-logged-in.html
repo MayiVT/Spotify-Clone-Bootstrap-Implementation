@@ -1,0 +1,31 @@
+<header class="container-fluid">
+    <div class="row bg-black" style="height: 6.5vh;">
+        <div class="col-4 text-center d-flex align-items-center text-white">
+            <i class="ms-4 bi bi-spotify" style="font-size: 2rem;"></i>
+        </div>
+        <div class="col-4 text-center d-flex flex-row align-items-center" data-bs-theme="dark">
+            <a class=" btn rounded-pill bg-secondary-subtle text-white px-3 py-2" href="/main.html">
+                <i class="bi bi-house-door-fill"></i>
+            </a>
+            <div class="ms-2 rounded-pill flex-grow-1 d-flex flex-row px-3 py-2 bg-secondary-subtle text-secondary">
+                <i class="bi bi-search"></i>
+                <input type="text" class="ms-2 border-0 bg-transparent text-white flex-grow-1"
+                    placeholder="What do you want to play?" style="outline: none;">
+                <div class="vr bg-secondary mx-2"></div>
+                <i class="bi bi-archive"></i>
+            </div>
+        </div>
+        <div class="col-4 text-center d-flex flex-row align-items-center justify-content-end" data-bs-theme="dark">
+            <a type="button" class="btn btn-light rounded-pill py-1 px-2 fs-6 fw-light" href="/premium.html">Explore Premium</a>
+            <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-title="0 Notifications."><i class="bi bi-bell-fill" style="font-size: 1.25rem;"></i></button>
+            <button type="button" class="btn rounded-circle">
+                <img data-bs-toggle="tooltip" data-bs-title="Profile" src="assets/images/artists/jihyo.jpeg" class="rounded-circle" style="width: 3rem; height: 3rem;">
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
