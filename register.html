@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Spotify Clone</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-black bg-gradient overflow-hidden">
+    
+    <div class="row d-flex flex-row justify-content-center align-items-center" style="height: 100vh; width: 100vw;">
+        <div class="col-4 bg-secondary-subtle d-flex flex-column justify-content-center align-items-center text-white p-4" data-bs-theme="dark">
+            <i class="bi bi-spotify" style="font-size: 2.5rem;"></i>
+            <h2 class="mb-4">Sign Up to Spotify</h2>
+            <button class="mb-2 bg-secondary-subtle rounded-pill py-2 pe-4 ps-2 text-white border border-light d-flex align-items-center justify-content-around text-start" type="button" style="width: 300px;">
+                <i class="bi bi-google"></i>
+                Sign Up with Google
+            </button>
+            <button class="mb-2 bg-secondary-subtle rounded-pill py-2 pe-4 ps-2 text-white border border-light d-flex align-items-center justify-content-around text-start" type="button" style="width: 300px;">
+                <i class="bi bi-facebook"></i>
+                Sign Up with Facebook
+            </button>
+            <button class="mb-4 bg-secondary-subtle rounded-pill py-2 pe-4 ps-2 text-white border border-light d-flex align-items-center justify-content-around text-start" type="button" style="width: 300px;">
+                <i class="bi bi-apple"></i>
+                Sign Up with Apple
+            </button>
+
+            <div class="d-flex flex-row w-100 px-5 text-center align-items-center justify-content-center">
+                <hr class="border border-secondary my-4" style="width: 35%;">
+                <p class="mt-3 mx-4">or</p>
+                <hr class="border border-secondary my-4" style="width: 35%;">
+            </div>
+            
+
+            <div class="d-flex flex-column justify-content-start gap-2">
+                <label for="email" class="">Email or username</label>
+                <input class="border-1 border-white rounded-2 px-4 py-2 bg-transparent text-white" type="text" id="email" placeholder="Email or username" style="-webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none;">
+                <label for="password">Password</label>
+                <input class="border-1 border-white rounded-2 px-4 py-2 bg-transparent text-white" type="password" id="password" placeholder="Password" style="-webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none;">
+            </div>
+
+            <button class="mt-4 mb-4 btn btn-success rounded-pill py-2 px-5 text-black">
+                Register
+            </button>
+
+            <div class="d-flex flex-row gap-3 mt-4">
+                <p>Alredy have an account?</p>
+                <a class="text-white text-decoration-underline link-underline-success-hover" href="/login.html">Log in here.</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Add after jQuery script -->
+    <script src="assets/js/auth.js"></script>
+
+    <!-- Add before closing body tag -->
+    <script>
+        $(document).ready(function() {
+            $('.btn-success').click(async function() {
+                const username = $('#email').val();
+                const password = $('#password').val();
+    
+                if (!username || !password) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+    
+                const registerResult = await register(username, password);
+                if (registerResult) {
+                    alert('Registration successful! Please log in.');
+                    window.location.href = '/login.html';
+                } else {
+                    alert('Username already exists or registration failed');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
