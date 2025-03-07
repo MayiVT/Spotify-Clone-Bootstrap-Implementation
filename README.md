@@ -40,6 +40,7 @@ SpotifyClone/
 ├── main.html
 ├── playlist.html
 ├── register.html
+├── premium.html
 └── server.js
 ```
 
